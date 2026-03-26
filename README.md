@@ -93,7 +93,7 @@ python run.py plots --base 32
 
 Training all three bases takes roughly 2 days on a single A10G GPU.
 
-## What Would Count as a New Finding
+## Curious about if...
 
 1. **Latent control-flow precedes behavioral competence.** If $k$ and $k'$ become linearly decodable from the residual stream before the model's accuracy jumps, this gives a concrete progress measure for Collatz learning and demonstrates that internal representations lead external behavior.
 
