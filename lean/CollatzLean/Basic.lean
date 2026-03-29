@@ -157,9 +157,41 @@ end Suffix
 
 section Distribution
 
+open Finset in
+theorem count_dvd_shift (N d : ℕ) (hd : 0 < d) :
+    (filter (fun i => d ∣ (i + 1)) (range N)).card ≤ N / d + 1 := by
+  calc (filter (fun i => d ∣ (i + 1)) (range N)).card
+      ≤ (range (N / d + 1)).card := by
+        apply Finset.card_le_card_of_injOn (fun i => (i + 1) / d - 1)
+        · intro x hx
+          simp only [Finset.mem_coe, Finset.mem_filter, Finset.mem_range] at hx ⊢
+          have hle : d ≤ x + 1 := Nat.le_of_dvd (by omega) hx.2
+          have h1 : 1 ≤ (x + 1) / d := Nat.div_pos hle hd
+          have h2 : (x + 1) / d ≤ N / d := Nat.div_le_div_right (by omega)
+          omega
+        · intro x₁ hx₁ x₂ hx₂ heq
+          simp only [Finset.mem_coe, Finset.mem_filter, Finset.mem_range] at hx₁ hx₂
+          have e1 : (x₁ + 1) / d * d = x₁ + 1 := Nat.div_mul_cancel hx₁.2
+          have e2 : (x₂ + 1) / d * d = x₂ + 1 := Nat.div_mul_cancel hx₂.2
+          have hle1 : d ≤ x₁ + 1 := Nat.le_of_dvd (by omega) hx₁.2
+          have hle2 : d ≤ x₂ + 1 := Nat.le_of_dvd (by omega) hx₂.2
+          have h1 : 1 ≤ (x₁ + 1) / d := Nat.div_pos hle1 hd
+          have h2 : 1 ≤ (x₂ + 1) / d := Nat.div_pos hle2 hd
+          have heq' : (x₁ + 1) / d = (x₂ + 1) / d := by
+            have := heq; simp only at this; omega
+          linarith [e1.symm.trans (congrArg (· * d) heq' ▸ e2)]
+      _ = N / d + 1 := Finset.card_range _
+
 theorem count_odd_with_v2_ge (N j : ℕ) (hj : 0 < j) :
     (Finset.filter (fun i => 2 ^ j ∣ (2 * i + 2))
       (Finset.range N)).card ≤ N / 2 ^ (j - 1) + 1 := by
-  sorry
+  have hj1 : j = (j - 1) + 1 := by omega
+  have heq : ∀ i, (2 ^ j ∣ (2 * i + 2)) ↔ (2 ^ (j - 1) ∣ (i + 1)) := by
+    intro i
+    rw [show 2 * i + 2 = 2 * (i + 1) from by ring]
+    rw [hj1, pow_succ, mul_comm]
+    exact Nat.mul_dvd_mul_iff_left (by omega : 0 < 2)
+  simp_rw [heq]
+  exact count_dvd_shift N (2 ^ (j - 1)) (by positivity)
 
 end Distribution
