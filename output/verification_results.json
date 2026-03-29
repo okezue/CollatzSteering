@@ -1,0 +1,262 @@
+{
+  "1_b24_kmax": {
+    "k_accuracy": [
+      {
+        "k": 1,
+        "acc": 0.9997792184332537,
+        "total": 49823
+      },
+      {
+        "k": 2,
+        "acc": 0.9996033792091381,
+        "total": 25213
+      },
+      {
+        "k": 3,
+        "acc": 0.9994451929935801,
+        "total": 12617
+      },
+      {
+        "k": 4,
+        "acc": 0.9965539875287168,
+        "total": 6094
+      },
+      {
+        "k": 5,
+        "acc": 0.9878087905036894,
+        "total": 3117
+      },
+      {
+        "k": 6,
+        "acc": 0.9555281037677579,
+        "total": 1619
+      },
+      {
+        "k": 7,
+        "acc": 0.6929716399506781,
+        "total": 811
+      },
+      {
+        "k": 8,
+        "acc": 0.0,
+        "total": 328
+      },
+      {
+        "k": 9,
+        "acc": 0.0,
+        "total": 196
+      },
+      {
+        "k": 10,
+        "acc": 0.0,
+        "total": 82
+      },
+      {
+        "k": 11,
+        "acc": 0.0,
+        "total": 54
+      },
+      {
+        "k": 12,
+        "acc": 0.0,
+        "total": 23
+      },
+      {
+        "k": 13,
+        "acc": 0.0,
+        "total": 10
+      },
+      {
+        "k": 14,
+        "acc": 0.0,
+        "total": 11
+      },
+      {
+        "k": 15,
+        "acc": 0.0,
+        "total": 1
+      },
+      {
+        "k": 17,
+        "acc": 0.0,
+        "total": 1
+      }
+    ],
+    "sharp_cutoff_b24": null,
+    "last_k_above_90_b24": 6,
+    "first_k_below_50_b24": 8,
+    "sharp_cutoff_b32": null,
+    "last_k_above_90_b32": 6,
+    "bits_capacity_b24": 27.509775004326936,
+    "bits_capacity_b32": 30.0
+  },
+  "2_geometric_decay": {
+    "C": 35700.613053980254,
+    "r": 0.5069758603263071,
+    "r_95ci": [
+      0.49964442008064297,
+      0.514414877108235
+    ],
+    "R_squared": 0.9990433085386572,
+    "test_r_eq_half": {
+      "z": 1.8642769632171068,
+      "p": 0.06228282016755249,
+      "rejected": false
+    },
+    "data": {
+      "1": 18641,
+      "2": 9375,
+      "3": 4678,
+      "4": 2403,
+      "5": 1153,
+      "6": 576,
+      "7": 311,
+      "8": 141,
+      "9": 76,
+      "10": 46
+    }
+  },
+  "3_nonmonotone": {
+    "anomaly_cells": [
+      {
+        "k": 6,
+        "kp_lo": 1,
+        "kp_hi": 2,
+        "acc_lo": 0.9646017699115044,
+        "acc_hi": 0.9952380952380953
+      },
+      {
+        "k": 6,
+        "kp_lo": 5,
+        "kp_hi": 6,
+        "acc_lo": 0.1111111111111111,
+        "acc_hi": 1.0
+      },
+      {
+        "k": 6,
+        "kp_lo": 8,
+        "kp_hi": 9,
+        "acc_lo": 0.8571428571428571,
+        "acc_hi": 1.0
+      },
+      {
+        "k": 7,
+        "kp_lo": 5,
+        "kp_hi": 6,
+        "acc_lo": 0.0,
+        "acc_hi": 1.0
+      }
+    ],
+    "b32_k6_kp_acc": {
+      "1": 0.9646017699115044,
+      "2": 0.9952380952380953,
+      "3": 0.9803921568627451,
+      "4": 0.9807692307692307,
+      "5": 0.1111111111111111,
+      "6": 1.0,
+      "7": 1.0,
+      "8": 0.8571428571428571,
+      "9": 1.0,
+      "10": 0.0,
+      "11": null,
+      "12": null,
+      "13": null,
+      "14": null,
+      "15": 0.0
+    },
+    "b32_k7_kp_acc": {
+      "1": 0.7862407862407862,
+      "2": 0.6458333333333334,
+      "3": 0.11009174311926606,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 1.0,
+      "7": 0.5,
+      "8": 0.0,
+      "9": null,
+      "10": 0.0,
+      "11": null,
+      "12": null,
+      "13": null,
+      "14": null,
+      "15": 0.0
+    },
+    "b32_k8_kp_acc": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": null,
+      "9": 0.0,
+      "10": null,
+      "11": null,
+      "12": 0.0,
+      "13": null,
+      "14": null,
+      "15": null
+    }
+  },
+  "4_suffix_bits": {
+    "test_k_depends_on_suffix": {
+      "n_tested": 100000,
+      "failures": 0,
+      "verified": true
+    },
+    "test_kp_with_5ceil_bits": {
+      "n_tested": 200000,
+      "failures": 13387
+    },
+    "test_kp_with_k_kp_plus1_bits": {
+      "n_tested": 100000,
+      "failures": 0,
+      "verified": true
+    },
+    "shift_test_k_preservation": {
+      "n_tested": 100000,
+      "failures": 0
+    },
+    "conclusion": "k(n) depends on n mod 2^(k+1), k'(n) depends on n mod 2^(k+k'+1)"
+  },
+  "5_formula_equiv_b11": {
+    "total_errors": 62645,
+    "pred_eq_kappa_min_k2_kp1": {
+      "matches": 37285,
+      "frac": 0.5951791842924415
+    },
+    "pred_eq_kappa_min_k2_min_kp1": {
+      "matches": 37285,
+      "frac": 0.5951791842924415
+    },
+    "pred_eq_kappa_1_1": {
+      "matches": 25018,
+      "frac": 0.3993614813632373
+    },
+    "pred_eq_kappa_some_kw_kpw": {
+      "matches": 37405,
+      "frac": 0.5970947402027297
+    },
+    "pred_eq_kappa_shifted_kp": {
+      "matches": 37255,
+      "frac": 0.5947002953148695
+    },
+    "pred_eq_kappa_small_shift": {
+      "matches": 32675,
+      "frac": 0.5215899114055391
+    }
+  },
+  "6_error_ratio": {
+    "general_formula_tested": 7424,
+    "general_formula_exact_matches": 7424,
+    "general_formula_failures": 0,
+    "note": "The formula (3/2)^(kw-k)*2^(kp-kpw) is approximate for kw!=k due to the -1 term",
+    "same_k_different_kp": {
+      "tested": 1502,
+      "exact_matches": 1502,
+      "formula": "kappa(n,k,kp+d)/kappa(n,k,kp)=2^(-d) exactly"
+    },
+    "approximate_within_1pct": "254/254"
+  }
+}
