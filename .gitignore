@@ -11,3 +11,4 @@ paper/*.synctex.gz
 paper/neurips_2026.sty
 paper/checklist.tex
 paper/*.pdf
+paper/
