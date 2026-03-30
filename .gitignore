@@ -3,3 +3,10 @@ __pycache__/
 *.pt
 *.log
 .DS_Store
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.out
+paper/*.synctex.gz
+paper/neurips_2026.sty
+paper/checklist.tex
