@@ -1,6 +1,6 @@
 # Steerable Control-Flow in Collatz Transformers
 
-This project builds on the findings of Charton and Narayanan (2024), ["Transformers know more than they can tell: Learning the Collatz sequence"](https://arxiv.org/abs/2511.10811), which showed that transformers trained on the long Collatz step learn the task by mastering discrete algorithmic classes one at a time, and that their errors are structured rather than random. We extend their work from behavioral observation to causal, representation-level analysis: we locate where the model encodes its internal "loop counters," show this information is present before the model can use it, and demonstrate that editing these representations steers outputs in predictable ways.
+This project builds on the findings of Charton and Narayanan (2025), ["Transformers know more than they can tell: Learning the Collatz sequence"](https://arxiv.org/abs/2511.10811), which showed that transformers trained on the long Collatz step learn the task by mastering discrete algorithmic classes one at a time, and that their errors are structured rather than random. We extend their work from behavioral observation to causal, representation-level analysis: we locate where the model encodes its internal "loop counters," show this information is present before the model can use it, and demonstrate that editing these representations steers outputs in predictable ways.
 
 ## Background: The Long Collatz Step
 
@@ -107,7 +107,7 @@ If transformers struggle less with arithmetic than with learning control flow, t
 
 ## References
 
-- Charton, F. and Narayanan, A. (2024). *Transformers know more than they can tell: Learning the Collatz sequence.* [arXiv:2511.10811](https://arxiv.org/abs/2511.10811)
+- Charton, F. and Narayanan, A. (2025). *Transformers know more than they can tell: Learning the Collatz sequence.* [arXiv:2511.10811](https://arxiv.org/abs/2511.10811)
 - Turner, A. et al. (2023). *Activation Addition: Steering Language Models Without Optimization.* [arXiv:2308.10248](https://arxiv.org/abs/2308.10248)
 - Nanda, N. et al. (2023). *Progress measures for grokking via mechanistic interpretability.* [arXiv:2301.05217](https://arxiv.org/abs/2301.05217)
 - Conmy, A. et al. (2024). *How to use and interpret activation patching.* [arXiv:2404.15255](https://arxiv.org/abs/2404.15255)
